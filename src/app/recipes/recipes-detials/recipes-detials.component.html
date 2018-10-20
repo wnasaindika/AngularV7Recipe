@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-12">
+    <img [src]="recipe.imagePath" alt="{{recipe.name}}" class="img-fluid">
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <h1>{{recipe.name}}</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <div class="btn-group open">
+      <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Manage Recipe
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li (click)="onAddtoShoppingList()" style="cursor: pointer;">To shopping list</li>
+        <li style="cursor: pointer;">Edit Recipe</li>
+        <li style="cursor: pointer;">Delete Recipe</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    {{recipe.description}}
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let ingradiant of recipe.ingradiants">
+        {{ingradiant.name}} - {{ingradiant.amount}}
+      </li>
+    </ul>
+  </div>
+</div>

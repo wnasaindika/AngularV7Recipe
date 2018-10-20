@@ -1,0 +1,13 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <button class="btn btn-success">Add Recipes</button>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-12">
+      <app-recipes-item *ngFor="let reci of recipe;let i= index" [res]="reci" [index]="i"></app-recipes-item>
+    </div>
+  </div>
+</div>
